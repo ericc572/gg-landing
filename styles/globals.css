@@ -1,0 +1,127 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #F5F0E1;
+  color: #7B3F00;
+}
+
+.container {
+  text-align: center;
+  padding: 13px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  margin-bottom: -40px;
+}
+
+.title {
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.launch-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.plant-button {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  padding: 15px 30px;
+  background-color: #78866B;
+  color: #F5F0E1;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.plant-button:hover {
+  background-color: #5F6B54;
+}
+
+.canvas {
+  margin-top: 20px;
+  background-color: #F5F0E1;
+  align-self: center;
+}
+
+/* Add these new styles for the Klaviyo form */
+/* .klaviyo-form-container {
+  margin-bottom: 10px;
+}
+
+.klaviyo-form-UFYQWG {
+  max-width: 400px;
+  margin: 0 auto;
+} */
+
+.email-signup {
+    max-width: 500px; /* Increased to accommodate side-by-side layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #F5F0E1;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    color: #7B3F00;
+}
+
+.email-signup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.email-signup p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.mc-field-group {
+    display: flex;
+    gap: 10px;
+}
+
+.email-signup input[type="email"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #7B3F00;
+    border-radius: 3px;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+}
+
+.email-signup input[type="submit"] {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #78866B;
+    color: #F5F0E1;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.email-signup input[type="submit"]:hover {
+    background-color: #5F6B54;
+}
