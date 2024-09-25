@@ -95,18 +95,13 @@ body, html {
     margin-bottom: 20px;
 }
 
-.mc-field-group {
-    display: flex;
-    gap: 10px;
-}
-
 .email-signup input[type="email"] {
-    flex-grow: 1;
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #7B3F00;
     border-radius: 3px;
     font-family: 'Playfair Display', serif;
-    box-sizing: border-box;
 }
 
 .email-signup input[type="submit"] {
@@ -119,9 +114,103 @@ body, html {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    white-space: nowrap;
 }
 
 .email-signup input[type="submit"]:hover {
     background-color: #5F6B54;
 }
+
+/* Existing styles */
+/* ... */
+
+/* Add these new styles for the Shop page */
+.shop-container {
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .shop-main {
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shop-title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #7B3F00; /* Matching your existing color scheme */
+    font-family: 'Playfair Display', serif; /* Matching your existing font */
+  }
+  
+  /* You might need to add some styles for the Shopify Buy Button container */
+  #product-component-1727300301806 {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+
+  #product-component-1727300560564 {
+    width: 100%;
+    max-width: 800px; /* Increased max-width for a larger component */
+    margin: 20px auto; /* Center the component with some margin */
+    padding: 0; /* Remove padding to eliminate the white background */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+    background-color: transparent; /* Set background to transparent */
+  }
+
+  .product-title {
+    font-size: 30px; /* Increased font size for the title */
+    font-weight: bold;
+    color: #4c4c4c; /* Darker color for better readability */
+    margin-bottom: 10px; /* Space below the title */
+    font-family: 'Playfair Display', serif; /* Match font */
+  }
+
+  .product-price {
+    font-size: 22px; /* Increased font size for the price */
+    color: #7B3F00; /* Match your theme color */
+    margin-bottom: 15px; /* Space below the price */
+    font-family: 'Playfair Display', serif; /* Match font */
+  }
+
+  .product-button {
+    background-color: #87560d; /* Button background */
+    color: #F5F0E1; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded button corners */
+    padding: 15px 30px; /* Increased button padding for a larger button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    font-size: 20px; /* Increased font size for the button */
+    font-family: 'Playfair Display', serif; /* Match font */
+  }
+
+  .product-button:hover {
+    background-color: #7a4d0c; /* Darker on hover */
+  }
+
+  /* Dropdown styles */
+  .select-dropdown {
+    font-family: 'Playfair Display', serif; /* Match font */
+    font-size: 18px; /* Increased font size for dropdowns */
+    padding: 10px; /* Increased padding for dropdowns */
+    border-radius: 10px; /* Rounded edges */
+    border: 1px solid #eaeaea; /* Light border */
+    margin-bottom: 15px; /* Space below dropdowns */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+
+  /* Additional styles for responsiveness */
+  @media (max-width: 600px) {
+    #product-component-1727300560564 {
+      padding: 0; /* Keep padding removed on smaller screens */
+    }
+  }
