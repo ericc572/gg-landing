@@ -155,14 +155,12 @@ body, html {
 
 
 
-/* skip
 /* Seed form and animation */
 .seed-form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-*/
 
 .seed {
   position: relative;
