@@ -1,17 +1,16 @@
-/* styles/globals.css */
+/* Styles for general layout */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Playfair Display', serif;
-  background-color: #F5F0E1;
+  background-color: #FAF4E8;
   color: #7B3F00;
 }
 
 .container {
   text-align: center;
-  padding: 13px;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -41,6 +40,95 @@ body, html {
   font-weight: bold;
 }
 
+.seed-image {
+  width: 150%; /* The image will take 100% of the parent width */
+  height: 150%; /* Maintain aspect ratio */
+  opacity: 0.9;
+}
+
+
+/* Remove white background and use the seed image as the container */
+.email-signup {
+  position: relative;
+  width: 400px; /* Adjust based on the seed image size */
+  margin: 0 auto;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Seed Image */
+.seed-image {
+  width: 103%;
+  height: auto;
+  opacity: 0.9; /* Slight translucency for blending */
+}
+
+/* Form Container */
+.email-signup .form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  background: none;
+  border: none;
+  z-index: 2;
+}
+
+/* Email Input Styling */
+.email-signup input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 30px; /* Round the input field */
+  border: 2px solid #2F4F4F; /* Dark green border for consistency */
+  background: rgba(255, 255, 255, 0.536); /* Semi-transparent white background */
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.email-signup input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #78866B; /* sage green for button */
+  color: #fff;
+  border-radius: 30px; /* Rounded button */
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.email-signup input[type="submit"]:hover {
+  background-color: #2F4F4F; /* Dark green on hover */
+}
+
+/* Headline and Paragraph Styling */
+.email-signup h2, .email-signup p {
+  background: none;
+  margin: 0;
+  padding: 0;
+  color: #78866B; /* Brown for text consistency */
+  z-index: 3;
+}
+
+/* Fine-Tuning the Headline */
+.email-signup h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #D4B484;
+}
+
+.email-signup p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #D4B484;
+}
+
+
+
+
 .plant-button {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
@@ -65,152 +153,113 @@ body, html {
   align-self: center;
 }
 
-/* Add these new styles for the Klaviyo form */
-/* .klaviyo-form-container {
-  margin-bottom: 10px;
+
+
+/* skip
+/* Seed form and animation */
+.seed-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
+.seed {
+  position: relative;
+  width: 260px; /* Increased size by 30% */
+  height: 400px; /* Increased size by 30% */
+  background-color: #7B3F00; /* Seed color */
+  border-radius: 50% 50% 40% 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.klaviyo-form-UFYQWG {
-  max-width: 400px;
-  margin: 0 auto;
-} */
+.seed form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seed input,
+.seed button {
+  margin: 8px 0;
+  width: 200px; /* Increased size by 30% */
+  font-size: 1.1em; /* Slightly larger font */
+}
+
+.seed input {
+  padding: 10px;
+  border: 1px solid #7B3F00;
+  border-radius: 5px;
+}
+
+.seed button {
+  background-color: #78866B;
+  color: #F5F0E1;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* PDF display */
+.pdf-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8; /* Translucent effect */
+}
+
+.pdf-frame {
+  width: 80%;
+  height: 500px; /* PDF display size */
+  border: none;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+  .seed {
+    width: 180px; /* Adjust size for mobile */
+    height: 270px;
+  }
+
+  .pdf-frame {
+    width: 100%;
+    height: 400px;
+  }
+}
 
 .email-signup {
-    max-width: 500px; /* Increased to accommodate side-by-side layout */
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #F5F0E1;
-    border-radius: 5px;
-    font-family: 'Playfair Display', serif;
-    color: #7B3F00;
+  background-color: #fff; /* You can add some styles to make it look like part of the seed */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Adds space between the form and the "Plant my seed" button */
 }
 
-.email-signup h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.seed-form {
+  margin-top: 20px;
 }
 
-.email-signup p {
-    font-size: 16px;
-    margin-bottom: 20px;
+.seed-form .seed {
+  display: flex;
+  justify-content: center;
 }
 
-.email-signup input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #7B3F00;
-    border-radius: 3px;
-    font-family: 'Playfair Display', serif;
+/* Presale Button */
+.presale-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #78866B; /* Dark green for button background */
+  color: #fff; /* White text */
+  border-radius: 30px; /* Rounded corners for consistency */
+  border: none; /* Remove border */
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-.email-signup input[type="submit"] {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #78866B;
-    color: #F5F0E1;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.presale-button button:hover {
+  background-color: #2F4F4F; /* Sage green on hover, consistent with other button */ 
 }
-
-.email-signup input[type="submit"]:hover {
-    background-color: #5F6B54;
-}
-
-/* Existing styles */
-/* ... */
-
-/* Add these new styles for the Shop page */
-.shop-container {
-    padding: 0 2rem;
-    text-align: center;
-  }
-  
-  .shop-main {
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .shop-title {
-    margin: 0;
-    line-height: 1.15;
-    font-size: 4rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #7B3F00; /* Matching your existing color scheme */
-    font-family: 'Playfair Display', serif; /* Matching your existing font */
-  }
-  
-  /* You might need to add some styles for the Shopify Buy Button container */
-  #product-component-1727300301806 {
-    width: 100%;
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto;
-  }
-
-  #product-component-1727300560564 {
-    width: 100%;
-    max-width: 800px; /* Increased max-width for a larger component */
-    margin: 20px auto; /* Center the component with some margin */
-    padding: 0; /* Remove padding to eliminate the white background */
-    border: none; /* Remove border */
-    box-shadow: none; /* Remove shadow */
-    background-color: transparent; /* Set background to transparent */
-  }
-
-  .product-title {
-    font-size: 30px; /* Increased font size for the title */
-    font-weight: bold;
-    color: #4c4c4c; /* Darker color for better readability */
-    margin-bottom: 10px; /* Space below the title */
-    font-family: 'Playfair Display', serif; /* Match font */
-  }
-
-  .product-price {
-    font-size: 22px; /* Increased font size for the price */
-    color: #7B3F00; /* Match your theme color */
-    margin-bottom: 15px; /* Space below the price */
-    font-family: 'Playfair Display', serif; /* Match font */
-  }
-
-  .product-button {
-    background-color: #87560d; /* Button background */
-    color: #F5F0E1; /* Button text color */
-    border: none; /* Remove default border */
-    border-radius: 10px; /* Rounded button corners */
-    padding: 15px 30px; /* Increased button padding for a larger button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
-    font-size: 20px; /* Increased font size for the button */
-    font-family: 'Playfair Display', serif; /* Match font */
-  }
-
-  .product-button:hover {
-    background-color: #7a4d0c; /* Darker on hover */
-  }
-
-  /* Dropdown styles */
-  .select-dropdown {
-    font-family: 'Playfair Display', serif; /* Match font */
-    font-size: 18px; /* Increased font size for dropdowns */
-    padding: 10px; /* Increased padding for dropdowns */
-    border-radius: 10px; /* Rounded edges */
-    border: 1px solid #eaeaea; /* Light border */
-    margin-bottom: 15px; /* Space below dropdowns */
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding and border in width */
-  }
-
-  /* Additional styles for responsiveness */
-  @media (max-width: 600px) {
-    #product-component-1727300560564 {
-      padding: 0; /* Keep padding removed on smaller screens */
-    }
-  }

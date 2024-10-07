@@ -1,55 +1,49 @@
-/* Navbar.module.css */
-
+/* Default navbar styles */
 .nav {
-    background-color: #F5F0E1;
-    padding: 1rem 2rem;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .navItemsContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #7B3F00;
-    text-decoration: none;
-    margin-right: 2rem;
-  }
-  
-  .linkContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .link {
-    color: #7B3F00;
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin-right: 1.5rem;
-  }
-  
-  /* Remove margin from the last link */
-  .link:last-child {
-    margin-right: 0;
-  }
-  
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    .navItemsContainer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .linkContainer {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .link {
-      margin: 0.5rem 0;
-    }
-  }
-  
+  background-color: #F5F0E1; /* Original navbar background */
+  padding: 10px 20px;  /* Adjusted padding: 10px top and bottom, 20px left and right */
+  transition: background-color 0.3s ease;
+}
+
+.navItemsContainer {
+  display: flex;
+  justify-content: space-between; /* Spread the logo and links */
+  align-items: center;
+  width: 100%;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  gap: 40px; /* Adds space between the links */
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #7B3F00; /* Original text color */
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; /* Center the logo */
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 15px; /* Adjust top padding */
+  padding-bottom: 5px; /* Reduce bottom padding */
+  transition: color 0.3s ease;
+}
+
+/* Hover effects */
+.nav:hover {
+  background-color: #78866B; /* Background color changes on hover */
+}
+
+.link:hover, .logo:hover {
+  color: green; /* Text turns green on hover */
+}
+
