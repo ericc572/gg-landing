@@ -26,13 +26,17 @@ body, html {
 }
 
 .title {
-  font-size: 48px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  text-align: center;
+  display: block;
+  position: relative;
+  justify-content: center;
+  width: 100%;
 }
 
 .subtitle {
   font-size: 20px;
+  padding-top: -20px;
 }
 
 .launch-text {
@@ -41,9 +45,17 @@ body, html {
 }
 
 .seed-image {
-  width: 150%; /* The image will take 100% of the parent width */
-  height: 150%; /* Maintain aspect ratio */
-  opacity: 0.9;
+  width: 120%; /* The image will take 100% of the parent width */
+  height: 120%; /* Maintain aspect ratio */
+  opacity: 0.7;
+}
+
+.footer {
+  text-align: center;
+  font-size: 18px; /* Adjust font size as needed */
+  margin-top: -35px; /* Reduce this value to move it closer to the seed */
+  margin-bottom: 0; /* Remove any bottom margin */
+  margin-left: 10px;
 }
 
 
@@ -72,6 +84,7 @@ body, html {
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
+  font-family: 'Playfair Display', serif;
   background: none;
   border: none;
   z-index: 2;
@@ -79,24 +92,30 @@ body, html {
 
 /* Email Input Styling */
 .email-signup input[type="email"] {
-  padding: 12px;
-  font-size: 16px;
-  width: 100%;
-  border-radius: 30px; /* Round the input field */
+  font-family: 'Playfair Display', serif; /* Ensure correct font is applied */
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #7B3F00; /* Set the font color for better readability */
+  padding: 12px; /* Add padding for a more user-friendly input */
   border: 2px solid #2F4F4F; /* Dark green border for consistency */
+  border-radius: 5px; /* Add some border radius for smoother edges */
+  width: 100%; /* Make the input field take full width */
   background: rgba(255, 255, 255, 0.536); /* Semi-transparent white background */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
   margin-top: 10px;
+  margin-left: 10px;
 }
+
 
 /* Submit Button */
 .email-signup input[type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 30px;
+  font-size: 20px;
   background-color: #78866B; /* sage green for button */
   color: #fff;
-  border-radius: 30px; /* Rounded button */
+  border-radius: 35px; /* Rounded button */
   border: none;
   cursor: pointer;
+  font-family: 'Playfair Display', serif; 
   margin-top: 10px;
 }
 
@@ -215,19 +234,6 @@ body, html {
   border: none;
 }
 
-/* Additional styles for responsiveness */
-@media (max-width: 600px) {
-  .seed {
-    width: 180px; /* Adjust size for mobile */
-    height: 270px;
-  }
-
-  .pdf-frame {
-    width: 100%;
-    height: 400px;
-  }
-}
-
 .email-signup {
   background-color: #fff; /* You can add some styles to make it look like part of the seed */
   padding: 20px;
@@ -248,16 +254,134 @@ body, html {
 
 /* Presale Button */
 .presale-button button {
-  padding: 10px 20px;
+  position: fixed;
+  font-family: 'Playfair Display', serif; 
+  bottom: 20px;
+  right: 20px;
+  background-color: #78866B; /* Customize to match your design */
+  color: white;
+  padding: 15px 25px;
   font-size: 16px;
-  background-color: #78866B; /* Dark green for button background */
-  color: #fff; /* White text */
-  border-radius: 30px; /* Rounded corners for consistency */
-  border: none; /* Remove border */
+  border-radius: 10px;
+  border: none;
+  text-align: center;
   cursor: pointer;
-  margin-top: 20px;
+  z-index: 1000;
 }
 
 .presale-button button:hover {
   background-color: #2F4F4F; /* Sage green on hover, consistent with other button */ 
 }
+
+.email-signup h2 {
+  font-size: 28px; /* Increase the size of the header */
+  font-weight: bold; /* Ensure it's bold */
+  color: #f5f5f59f; /* Choose a standout color, but still consistent with your brand */
+  text-align: center; /* Center the text */
+  margin-left: 10px;
+  margin-bottom: 10px; /* Add some space below the title */
+}
+
+.email-signup p {
+  font-size: 18px; /* Increase the size of the description */
+  color: #f5f5f59f; /* Matching color with the header */
+  text-align: center; /* Center the text */
+  font-style: italic; /* Make it stand out with an italic style */
+  margin-left: 15px;
+  margin-bottom: 20px; /* Add space between the paragraph and the next section */
+}
+
+
+/* Mobile Styles for Paragraph and Button */
+@media (max-width: 768px) {
+  .content p {
+    justify-content: center;
+    margin-left: 28px;
+    text-align: center;
+  }
+  .title {
+    padding-top: 10px;
+    font-size: 32px;
+    text-align: center;
+    display: block; /* Change from flex to block on mobile for simpler centering */
+    position: relative;
+    width: 100%; /* Ensure it takes up the full width */
+    margin: 0 auto; /* Center the title in its container */
+    padding-left: 20px;
+  }
+  .email-signup p {
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .email-signup {
+    background-color: #fff; /* You can add some styles to make it look like part of the seed */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Adds space between the form and the "Plant my seed" button */
+  }
+  
+  .seed-image {
+    width: 82%;
+    height: auto;
+    opacity: 0.9; /* Slight translucency for blending */
+  }
+  
+
+  /* Form Container */
+  .email-signup .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background: none;
+    border: none;
+    z-index: 2;
+  }
+
+  .presale-button {
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+  }
+
+  .presale-button button {
+    width: 100%;
+    max-width: 300px; /* Set a max width to keep it from stretching too wide */
+  }
+
+  .email-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .subscribe-button {
+    width: 90%;
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .presale-button button {
+    font-size: 12px; /* Slightly smaller font for mobile */
+    padding: 12px 20px; /* Reduce padding for better fit on mobile screens */
+    width: 35%; /* Make the button fill more of the screen */
+    margin: 0; /* Center the button */
+  }
+
+  .footer {
+    text-align: left;
+    margin-bottom: 0; /* Remove any bottom margin */
+    margin-left: 10px;
+  }
+  
+}
+

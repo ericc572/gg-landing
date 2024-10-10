@@ -1,49 +1,75 @@
 /* Default navbar styles */
 .nav {
-  background-color: #F5F0E1; /* Original navbar background */
-  padding: 10px 20px;  /* Adjusted padding: 10px top and bottom, 20px left and right */
+  background-color: #F5F0E1;
+  padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
 
 .navItemsContainer {
   display: flex;
-  justify-content: space-between; /* Spread the logo and links */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
 .linkContainer {
   display: flex;
-  justify-content: flex-end; /* Align links to the right */
-  gap: 40px; /* Adds space between the links */
+  justify-content: flex-end;
+  gap: 40px;
   align-items: center;
 }
 
 .link {
   text-decoration: none;
-  color: #7B3F00; /* Original text color */
+  color: #7B3F00;
   font-size: 22px;
   transition: color 0.3s ease;
 }
 
 .logo {
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto; /* Center the logo */
-  font-size: 24px;
-  font-weight: bold;
-  padding-top: 15px; /* Adjust top padding */
-  padding-bottom: 5px; /* Reduce bottom padding */
-  transition: color 0.3s ease;
+  width: auto; /* Ensure the width adjusts automatically */
+  height: 90px; /* Set a fixed height to prevent it from being smushed */
+  max-width: 140%; /* Ensures it doesn't overflow the container */
+  object-fit: contain; /* Maintains the aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the logo */
 }
 
-/* Hover effects */
-.nav:hover {
-  background-color: #78866B; /* Background color changes on hover */
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-.link:hover, .logo:hover {
-  color: green; /* Text turns green on hover */
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #7B3F00;
+  border-radius: 2px;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .linkContainer {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #F5F0E1;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  /* Show nav links when active */
+  .linkContainer.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

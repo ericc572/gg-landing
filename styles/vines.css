@@ -1,49 +1,37 @@
-/* Vine Growth Keyframes (same as before) */
-@keyframes vineGrow {
-    0% {
-      transform: scale(0.8) rotate(0); /* Start smaller and no rotation */
-      opacity: 0.5; /* Slight transparency at the start */
-    }
-    50% {
-      transform: scale(1.05) rotate(2deg); /* Slight sway and grow */
-      opacity: 0.8;
-    }
-    100% {
-      transform: scale(1) rotate(-2deg); /* End at full size with slight sway */
-      opacity: 1;
-    }
+/* Vine Image at the Top */
+.vine-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Adjust the size as needed */
+  opacity: 0;
+  animation: growFadeIn 5s ease-in-out forwards; /* Growing and fading in */
+}
+
+/* Vine Image at the Bottom */
+.vine-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Adjust the size as needed */
+  opacity: 0;
+  animation: growFadeIn 5s ease-in-out forwards 1s; /* Slight delay for bottom vine */
+}
+
+/* Animation for fading and growing the vine */
+@keyframes growFadeIn {
+  0% {
+    transform: scale(0.5) translateX(-50%);
+    opacity: 0;
   }
-  
-  /* Vine Styling */
-  .vine {
-    position: absolute;
-    width: 375px; /* 2.5 times the original width of 150px */
-    height: auto;
-    animation: vineGrow 5s ease-in-out infinite alternate;
+  50% {
+    transform: scale(1.2) translateX(-50%);
+    opacity: 0.5;
   }
-  
-  /* Vine Positions and Rotations */
-  .vine-top-left {
-    top: 0;
-    left: 0;
-    transform: rotate(-30deg); /* Scale and rotate */
+  100% {
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
   }
-  
-  .vine-top-right {
-    top: 0;
-    right: 0;
-    transform: scale(2.5) rotate(80deg); /* Scale and rotate */
-  }
-  
-  .vine-bottom-left {
-    bottom: 0;
-    left: 0;
-    transform: scale(2.5) rotate(-120deg); /* Scale and rotate */
-  }
-  
-  .vine-bottom-right {
-    bottom: 0;
-    right: 0;
-    transform: scale(2.5) rotate(120deg); /* Scale and rotate */
-  }
-  
+}
