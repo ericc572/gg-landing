@@ -25,8 +25,13 @@ export default function Home() {
 
   return (
     <div className="container">
+
+    <div className="vine-top">
+      <img src="/vine2.png" alt="Vine at the top" />
+    </div>
+    
       <div className="content">
-        {/* <h1 className="title">GAIA'S GARDEN</h1> */}
+
         <h1 className="title">
           <strong> WELLNESS, STREETWEAR, COMMUNITY EVENTS </strong>
         </h1>

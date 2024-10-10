@@ -32,6 +32,7 @@ body, html {
   position: relative;
   justify-content: center;
   width: 100%;
+  padding-top: 100px;
 }
 
 .subtitle {
@@ -300,8 +301,8 @@ body, html {
     text-align: center;
   }
   .title {
-    padding-top: 10px;
-    font-size: 32px;
+    padding-top: 110px;
+    font-size: 28px;
     text-align: center;
     display: block; /* Change from flex to block on mobile for simpler centering */
     position: relative;
@@ -384,4 +385,3 @@ body, html {
   }
   
 }
-
