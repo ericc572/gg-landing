@@ -13,12 +13,12 @@ export default function About() {
 
       {/* Stock image placeholder */}
       <div style={{ margin: '2rem 0' }}>
-        <Image
-          src="https://via.placeholder.com/600x400"  // Replace with the actual image later
+        {/* <Image
+          src=""  // Replace with the actual image later
           alt="Gaia's Garden"
           width={600}
           height={400}
-        />
+        /> */}
       </div>
 
       <p>
@@ -26,9 +26,9 @@ export default function About() {
         shared love for nature's beauty. Our brand is about planting seeds of wellness and watching them grow in your life.
       </p>
 
-      <Link href="/events">
+      {/* <Link href="/events">
         <a style={{ color: '#7B3F00', textDecoration: 'underline' }}>Learn more about our upcoming events</a>
-      </Link>
+      </Link> */}
     </div>
   );
 }

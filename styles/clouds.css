@@ -1,0 +1,64 @@
+/* General Cloud Styling */
+.cloud {
+    position: absolute;
+    background-size: contain;
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.536);
+    transform: translateX(-50%);
+    animation: float 10s infinite ease-in-out;
+}
+
+/* Small Clouds */
+.cloud img {
+    width: 70px; /* Small cloud size */
+    height: auto;
+}
+
+/* Large Cloud Styling */
+.large-cloud {
+    position: absolute;
+    top: -30px; /* Center vertically */
+    left: 80px; /* Center horizontally */
+    width: 250px; /* Large cloud size */
+    height: auto;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 0; /* Ensure it's behind content, but below nav */
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position Small Clouds */
+.cloud-1 { top: 3%; left: 80%; }
+.cloud-2 { top: 17%; left: 30%; }
+.cloud-5 { top: 25%; left: 90%; }
+
+
+.large-cloud img {
+    width: 90%; /* Fill the large cloud container */
+    height: auto;
+}
+
+/* Logo inside the large cloud */
+.large-cloud .logo {
+    position: absolute;
+    top: 55%;
+    margin-right: 30px;
+    left: 37%; 
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the logo is above the cloud */
+}
+
+.large-cloud .logo img {
+    margin-top: 20%;
+    width: 160%; /* Increase logo size */
+}
+
+/* Floating Animation */
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}

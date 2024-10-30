@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import Link from 'next/link'; // For navigation
+import Link from 'next/link';
+
 
 export default function Home() {
-  const [email, setEmail] = useState(''); // State for Mailchimp email input
-  const [submitted, setSubmitted] = useState(false); // State for form submission
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -16,31 +17,36 @@ export default function Home() {
     }
   };
 
-  // const hamburger = document.getElementById('hamburger');
-  // const navLinks = document.querySelector('.nav-links');
-
-  // hamburger.addEventListener('click', () => {
-  //   navLinks.classList.toggle('active');
-  // });
-
   return (
-    <div className="container">
-
-    <div className="vine-top">
-      <img src="/vine2.png" alt="Vine at the top" />
-    </div>
     
+    <div className="container">
+       <div className="cloud large-cloud">
+          <img src="/png-cloud.png" />
+          <div className="logo">
+            <Link href="/"> 
+              <img src="/gaia-garden-logo.png" alt="Logo" />
+            </Link>
+          </div>
+        </div> 
+
+        <div className="cloud cloud-1"><img src="/png-cloud.png" /></div>
+        <div className="cloud cloud-2"><img src="/png-cloud.png" /></div>
+        <div className="cloud cloud-3"><img src="/png-cloud.png" /></div>
+
+       
       <div className="content">
-
         <h1 className="title">
-          <strong> WELLNESS, STREETWEAR, COMMUNITY EVENTS </strong>
+          <strong> 💧 NATURE </strong> 
+          <br/>
+          <strong> 💧 WELLNESS </strong>
+          <br/>
+          <strong> 💧 COMMUNITY </strong>
         </h1>
-        <p className="subtitle">(Launching Nov 2024 - Presale Live)</p>
+        <p className="subtitle">(LAUNCHING 11/24 - PRESALE)</p>
 
-        {/* Mailchimp Signup Form */}
         {!submitted ? (
           <div className="email-signup">
-             <img src="/danny-seed2.png" alt="Seed Background" className="seed-image" />
+            <img src="/danny-seed2.png" alt="Seed Background" className="seed-image" />
             <div className="form-container">
               <form
                 action="https://gmail.us9.list-manage.com/subscribe/post?u=126538c8098f69a41b6383351&amp;id=74fe6c2574&amp;f_id=008956e1f0"
@@ -52,8 +58,8 @@ export default function Home() {
                 noValidate=""
                 onSubmit={handleEmailSubmit}
               >
-                <h2 className='stayInTouch'> <strong> Stay in Touch 😊 </strong></h2>
-                <p>For resources, drops, and events</p>
+                <h3 className="stayInTouch">JOIN OUR MAILING LIST </h3>
+                <h3> TO STAY UPDATED ☺️</h3>
                 <input
                   type="email"
                   name="EMAIL"
@@ -78,16 +84,13 @@ export default function Home() {
           <p>Thanks for subscribing! 🌱</p>
         )}
 
-        <p className="footer">
-          Made with ❤️ in Brooklyn, NY.
-        </p>
-        {/* New "Sign up for Presale" Button */}
+        <p className="footer">Made with ❤️ in Brooklyn, NY.</p>
+        
         <div className="presale-button">
           <Link href="/shop">
-            <button type="button">Join the Presale 🙏</button>
+            <button type="button">Presale 👈</button>
           </Link>
         </div>
-       
       </div>
     </div>
   );

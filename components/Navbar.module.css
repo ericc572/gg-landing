@@ -1,6 +1,6 @@
 /* Default navbar styles */
 .nav {
-  background-color: #F5F0E1;
+  background-color: #87CEEB;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
@@ -48,6 +48,10 @@
   height: 3px;
   background-color: #7B3F00;
   border-radius: 2px;
+}
+
+.navShop {
+  background-color: #F5F0E1; /* Specific color for the shop page */
 }
 
 /* Mobile Styles */
